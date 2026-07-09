@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Data Santri, Alumni & EMIS TPQ & Madrasah Diniyah">
+  <title>Data - TPQ & MADIN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700;8..60,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero { background: linear-gradient(135deg, var(--bg-warm), var(--bg-cream)); padding: 140px 0 80px; text-align: center; color: var(--text-dark); }
+    .page-hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 12px; }
+    .page-hero p { color: var(--text-muted); font-size: 1.1rem; }
+    .page-hero span { color: var(--secondary); }
+
+    .data-card { background: var(--white); border-radius: var(--radius); padding: 36px; box-shadow: var(--shadow); height: 100%; transition: var(--transition); }
+    .data-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+    .data-card .data-icon { font-size: 3rem; margin-bottom: 16px; }
+    .data-card h3 { color: var(--primary-dark); font-size: 1.3rem; margin-bottom: 8px; }
+    .data-card p { color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
+    .data-card .data-number { font-size: 2.5rem; font-weight: 800; color: var(--primary); }
+    .data-card .data-label { font-size: 0.85rem; color: var(--text-muted); }
+
+    .data-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+
+    .alumni-card { display: flex; gap: 20px; background: var(--white); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); margin-bottom: 16px; transition: var(--transition); align-items: center; }
+    .alumni-card:hover { box-shadow: var(--shadow-hover); transform: translateX(5px); }
+    .alumni-avatar { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--accent)); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--white); flex-shrink: 0; }
+    .alumni-info h4 { font-size: 1.05rem; color: var(--primary-dark); }
+    .alumni-info p { font-size: 0.85rem; color: var(--text-muted); }
+
+    .emis-card { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); border-radius: var(--radius-lg); padding: 50px; text-align: center; color: var(--white); position: relative; overflow: hidden; }
+    .emis-card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%); animation: rotate-bg 20s linear infinite; }
+    .emis-card * { position: relative; }
+    .emis-card h3 { font-size: 1.8rem; margin-bottom: 12px; }
+    .emis-card p { opacity: 0.8; margin-bottom: 24px; font-size: 1.05rem; }
+    .emis-status { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); padding: 10px 24px; border-radius: 50px; margin-bottom: 24px; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.2); }
+    .emis-status .dot { width: 10px; height: 10px; background: #4ade80; border-radius: 50%; animation: pulse-dot 2s infinite; }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2rem; }
+      .data-grid { grid-template-columns: 1fr; }
+      .emis-card { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+          <img src="images/Logo_Madrasah3.webp" alt="Madrasah Diniyah Logo" style="width:45px; height:45px; border-radius:50%; object-fit:cover;">
+          <div class="brand-text">
+            Madrasah Diniyah
+            <span>Lembaga Pendidikan Islam</span>
+          </div>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="pendaftaran.html">Pendaftaran</a></li>
+          <li><a href="pendidikan.html">Pendidikan</a></li>
+          <li><a href="kegiatan.html">Kegiatan</a></li>
+          <li><a href="program-unggulan.html">Program Unggulan</a></li>
+          <li><a href="dokumentasi.html">Dokumentasi</a></li>
+          <li><a href="data.html" class="active">Data</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Data <span>Lembaga</span></h1>
+      <p>Data santri, alumni, dan informasi EMIS TPQ & Madrasah Diniyah</p>
+    </div>
+  </section>
+
+  <!-- Data Santri TPQ -->
+  <section class="section-padding" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Statistik</span>
+        <h2 class="section-title">Data <span>Santri TPQ</span></h2>
+        <p class="section-subtitle">Rekap data santri aktif Taman Pendidikan Al-Qur'an</p>
+      </div>
+      <div class="data-grid">
+        <div class="data-card fade-up" style="text-align:center;">
+          <div class="data-icon">👦</div>
+          <div class="data-number">85</div>
+          <div class="data-label">Santri TPQ Aktif</div>
+        </div>
+        <div class="data-card fade-up" style="text-align:center;">
+          <div class="data-icon">👧</div>
+          <div class="data-number">65</div>
+          <div class="data-label">Santri TPQ Putri</div>
+        </div>
+        <div class="data-card fade-up" style="text-align:center;">
+          <div class="data-icon">📊</div>
+          <div class="data-number">6</div>
+          <div class="data-label">Kelas Aktif</div>
+        </div>
+      </div>
+      
+      <div class="section-header fade-up" style="margin-top:60px;">
+        <span class="section-tag">Alumni</span>
+        <h2 class="section-title">Data <span>Alumni</span></h2>
+        <p class="section-subtitle">Beberapa alumni berprestasi dari TPQ & Madrasah Diniyah</p>
+      </div>
+      <div style="max-width:600px; margin:0 auto;">
+        <div class="alumni-card fade-up">
+          <div class="alumni-avatar">👤</div>
+          <div class="alumni-info"><h4>Ahmad Rizki, S.Pd.</h4><p>Guru Al-Qur'an di Pondok Pesantren Modern - Angkatan 2015</p></div>
+        </div>
+        <div class="alumni-card fade-up">
+          <div class="alumni-avatar">👤</div>
+          <div class="alumni-info"><h4>Siti Nurhaliza</h4><p>Juara 1 MTQ Nasional - Angkatan 2017</p></div>
+        </div>
+        <div class="alumni-card fade-up">
+          <div class="alumni-avatar">👤</div>
+          <div class="alumni-info"><h4>Muhammad Faiz</h4><p>Mahasiswa Universitas Al-Azhar Kairo - Angkatan 2018</p></div>
+        </div>
+        <div class="alumni-card fade-up">
+          <div class="alumni-avatar">👤</div>
+          <div class="alumni-info"><h4>Fatimah Azzahra</h4><p>Hafidzah 30 Juz - Angkatan 2016</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data EMIS -->
+  <section class="section-padding" style="background: var(--bg-light);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">EMIS</span>
+        <h2 class="section-title">Data <span>EMIS</span></h2>
+        <p class="section-subtitle">Education Management Information System - Kementerian Agama</p>
+      </div>
+      <div class="emis-card fade-up">
+        <h3>📡 Sistem Informasi EMIS</h3>
+        <p>Data lembaga kami telah terintegrasi dengan sistem EMIS Kementerian Agama RI untuk manajemen data pendidikan yang lebih baik.</p>
+        <div class="emis-status">
+          <span class="dot"></span>
+          Status: Terintegrasi & Aktif
+        </div>
+        <br>
+        <a href="https://emis.kemenag.go.id" target="_blank" rel="noopener" class="btn btn-gold">🔗 Kunjungi Portal EMIS</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section section-padding">
+    <div class="container">
+      <div class="cta-content fade-up">
+        <h2>Butuh Informasi Lebih Detail?</h2>
+        <p>Hubungi kami untuk keperluan data dan informasi lebih lanjut</p>
+        <div class="cta-buttons">
+          <a href="kontak.html" class="btn btn-gold">Hubungi Kami</a>
+          <a href="https://emis.kemenag.go.id" class="btn btn-outline-light">Portal EMIS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand fade-up"><h3>TPQ &amp; MADIN</h3><p>Lembaga pendidikan Islam yang berkomitmen mencetak generasi Qur'ani yang berakhlak mulia, berilmu, dan berwawasan luas sejak tahun 2013.</p><div class="footer-social"><a href="#" aria-label="Facebook">📘</a><a href="#" aria-label="YouTube">📺</a><a href="#" aria-label="TikTok">🎵</a><a href="#" aria-label="Instagram">📸</a><a href="#" aria-label="Website">🌐</a></div></div>
+        <div class="fade-up"><h4>Navigasi</h4><ul class="footer-links"><li><a href="index.html">Beranda</a></li><li><a href="profil.html">Profil</a></li><li><a href="pendaftaran.html">Pendaftaran</a></li><li><a href="pendidikan.html">Pendidikan</a></li><li><a href="kegiatan.html">Kegiatan</a></li></ul></div>
+        <div class="fade-up"><h4>Lainnya</h4><ul class="footer-links"><li><a href="program-unggulan.html">Program Unggulan</a></li><li><a href="dokumentasi.html">Dokumentasi</a></li><li><a href="data.html">Data & EMIS</a></li><li><a href="kontak.html">Kontak</a></li></ul></div>
+        <div class="fade-up"><h4>Kontak</h4><ul class="footer-contact"><li><span class="contact-icon">📍</span><span>Jl. Pendidikan No. 123, Kelurahan Islami, Kecamatan Qur'ani, Kota 12345</span></li><li><span class="contact-icon">📱</span><span>+62 812-3456-7890</span></li><li><span class="contact-icon">📧</span><span>info@tpqmadin.sch.id</span></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 TPQ & Madrasah Diniyah. All rights reserved.</p><p>Berdedikasi untuk Ummat</p></div>
+    </div>
+  </footer>
+
+  <div class="floating-sosmed">
+    <a href="https://wa.me/6281234567890" class="sosmed-wa" target="_blank" rel="noopener" title="WhatsApp">💬<span class="sosmed-label">WhatsApp</span></a>
+    <a href="#" class="sosmed-fb" target="_blank" rel="noopener" title="Facebook">📘<span class="sosmed-label">Facebook</span></a>
+    <a href="#" class="sosmed-yt" target="_blank" rel="noopener" title="YouTube">📺<span class="sosmed-label">YouTube</span></a>
+    <a href="#" class="sosmed-tt" target="_blank" rel="noopener" title="TikTok">🎵<span class="sosmed-label">TikTok</span></a>
+    <a href="#" class="sosmed-ig" target="_blank" rel="noopener" title="Instagram">📸<span class="sosmed-label">Instagram</span></a>
+    <a href="#" class="sosmed-web" target="_blank" rel="noopener" title="Website">🌐<span class="sosmed-label">Website</span></a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

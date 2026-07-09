@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dokumentasi TPQ & Madrasah Diniyah - Galeri Foto & Prestasi">
+  <title>Dokumentasi - TPQ & MADIN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700;8..60,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero { background: linear-gradient(135deg, var(--bg-warm), var(--bg-cream)); padding: 140px 0 80px; text-align: center; color: var(--text-dark); }
+    .page-hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 12px; }
+    .page-hero p { color: var(--text-muted); font-size: 1.1rem; }
+    .page-hero span { color: var(--secondary); }
+
+    .dokumentasi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .dokum-item { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); cursor: pointer; background: var(--white); }
+    .dokum-item:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+    .dokum-image { height: 220px; overflow: hidden; position: relative; background: var(--bg-light); }
+    .dokum-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: var(--transition); }
+    .dokum-item:hover .dokum-image img { transform: scale(1.08); }
+    .dokum-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(13, 107, 79, 0.4), transparent 50%); opacity: 0; transition: var(--transition); pointer-events: none; }
+    .dokum-item:hover .dokum-image::after { opacity: 1; }
+    .dokum-caption { padding: 16px 20px; }
+    .dokum-caption h4 { font-size: 1rem; color: var(--primary-dark); margin-bottom: 4px; }
+    .dokum-caption p { font-size: 0.85rem; color: var(--text-muted); }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2rem; }
+      .dokumentasi-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .dokumentasi-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+          <img src="images/Logo_Madrasah3.webp" alt="Madrasah Diniyah Logo" style="width:45px; height:45px; border-radius:50%; object-fit:cover;">
+          <div class="brand-text">
+            Madrasah Diniyah
+            <span>Lembaga Pendidikan Islam</span>
+          </div>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="pendaftaran.html">Pendaftaran</a></li>
+          <li><a href="pendidikan.html">Pendidikan</a></li>
+          <li><a href="kegiatan.html">Kegiatan</a></li>
+          <li><a href="program-unggulan.html">Program Unggulan</a></li>
+          <li><a href="dokumentasi.html" class="active">Dokumentasi</a></li>
+          <li><a href="data.html">Data</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Dokumentasi <span>& Prestasi</span></h1>
+      <p>Galeri foto kegiatan dan portofolio prestasi TPQ & Madrasah Diniyah</p>
+    </div>
+  </section>
+
+  <!-- Dokumentasi TPQ -->
+  <section class="section-padding" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Galeri TPQ</span>
+        <h2 class="section-title">Dokumentasi <span>TPQ</span></h2>
+        <p class="section-subtitle">Momen-momen kegiatan Taman Pendidikan Al-Qur'an</p>
+      </div>
+      <div class="dokumentasi-grid">
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Anak_Ngaji3.webp" alt="Santri Mengaji" loading="lazy"></div><div class="dokum-caption"><h4>Santri Mengaji</h4><p>Santri TPQ sedang belajar membaca Al-Qur'an</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Anak_Ngaji4.webp" alt="Belajar Al-Qur'an" loading="lazy"></div><div class="dokum-caption"><h4>Belajar Al-Qur'an</h4><p>Suasana belajar mengaji santri TPQ</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Anak_Ngaji5.webp" alt="Santri TPQ" loading="lazy"></div><div class="dokum-caption"><h4>Santri TPQ</h4><p>Santri TPQ bersemangat dalam belajar</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Anak_Ngaji6.webp" alt="Mengaji Bersama" loading="lazy"></div><div class="dokum-caption"><h4>Mengaji Bersama</h4><p>Kebersamaan santri dalam mengaji</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Anak_ngaji1.webp" alt="Pembelajaran Al-Qur'an" loading="lazy"></div><div class="dokum-caption"><h4>Pembelajaran Al-Qur'an</h4><p>Proses belajar mengajar TPQ</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Anak_Ngaji2.webp" alt="Santri Belajar" loading="lazy"></div><div class="dokum-caption"><h4>Santri Belajar</h4><p>Santri tekun belajar membaca Al-Qur'an</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Anak_Ngaji7.webp" alt="Santri Ngaji" loading="lazy"></div><div class="dokum-caption"><h4>Santri Ngaji</h4><p>Kegiatan mengaji santri TPQ</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Anak_Ngaji8.webp" alt="Ngaji Santri" loading="lazy"></div><div class="dokum-caption"><h4>Ngaji Santri</h4><p>Santri fokus dalam pembelajaran</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Anak_makan.webp" alt="Santri Makan Bersama" loading="lazy"></div><div class="dokum-caption"><h4>Makan Bersama</h4><p>Kegiatan makan bersama santri TPQ</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Acara_Rutinan.webp" alt="Acara Rutinan" loading="lazy"></div><div class="dokum-caption"><h4>Acara Rutinan</h4><p>Kegiatan rutin mingguan TPQ & MADIN</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Acara_Rutin2.webp" alt="Kegiatan Rutin" loading="lazy"></div><div class="dokum-caption"><h4>Kegiatan Rutin</h4><p>Suasana acara rutin lembaga</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Acara_Rutin4.webp" alt="Acara Rutin Lembaga" loading="lazy"></div><div class="dokum-caption"><h4>Acara Rutin Lembaga</h4><p>Momen kebersamaan dalam acara rutin</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Acara_Rutinan3.jpeg" alt="Rutinan TPQ" loading="lazy"></div><div class="dokum-caption"><h4>Rutinan TPQ</h4><p>Kegiatan rutin TPQ & MADIN</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Acara_Rutinan5.webp" alt="Acara Rutinan Santri" loading="lazy"></div><div class="dokum-caption"><h4>Acara Rutinan Santri</h4><p>Kumpulan santri dalam acara rutinan</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Al-banjari1.webp" alt="Al-Banjari" loading="lazy"></div><div class="dokum-caption"><h4>Al-Banjari</h4><p>Penampilan grup rebana Al-Banjari</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Al-banjari2.webp" alt="Penampilan Al-Banjari" loading="lazy"></div><div class="dokum-caption"><h4>Penampilan Al-Banjari</h4><p>Grup Al-Banjari tampil di acara</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Al-banjari3.webp" alt="Rebana Al-Banjari" loading="lazy"></div><div class="dokum-caption"><h4>Rebana Al-Banjari</h4><p>Penampilan rebana Al-Banjari</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Alumni1.webp" alt="Alumni" loading="lazy"></div><div class="dokum-caption"><h4>Alumni TPQ</h4><p>Foto bersama alumni TPQ</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Alumni2.webp" alt="Alumni MADIN" loading="lazy"></div><div class="dokum-caption"><h4>Alumni MADIN</h4><p>Foto bersama alumni MADIN</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Alumni3.webp" alt="Wisuda Alumni" loading="lazy"></div><div class="dokum-caption"><h4>Wisuda Alumni</h4><p>Acara wisuda alumni TPQ & MADIN</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Alumni4.webp" alt="Pelepasan Alumni" loading="lazy"></div><div class="dokum-caption"><h4>Pelepasan Alumni</h4><p>Acara pelepasan alumni TPQ & MADIN</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dokumentasi Ekstrakurikuler -->
+  <section class="section-padding" style="background: var(--bg-light);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Galeri Ekskul</span>
+        <h2 class="section-title">Dokumentasi <span>Ekstrakurikuler</span></h2>
+        <p class="section-subtitle">Dokumentasi kegiatan ekstrakurikuler santri</p>
+      </div>
+      <div class="dokumentasi-grid">
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Al-banjari1.webp" alt="Al-Banjari" loading="lazy"></div><div class="dokum-caption"><h4>Al-Banjari 1</h4><p>Penampilan grup rebana Al-Banjari</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Al-banjari2.webp" alt="Al-Banjari 2" loading="lazy"></div><div class="dokum-caption"><h4>Al-Banjari 2</h4><p>Penampilan grup rebana di acara</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/kegiatan/Al-banjari3.webp" alt="Al-Banjari 3" loading="lazy"></div><div class="dokum-caption"><h4>Al-Banjari 3</h4><p>Penampilan grup rebana Al-Banjari</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/Pencak_Silat.webp" alt="Pencak Silat" loading="lazy"></div><div class="dokum-caption"><h4>Pencak Silat</h4><p>Latihan Pencak Silat santri</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/Pencak_Silat2.webp" alt="Pencak Silat 2" loading="lazy"></div><div class="dokum-caption"><h4>Pencak Silat 2</h4><p>Gerakan Pencak Silat santri</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/Prestasi_Tartil.webp" alt="Prestasi Tartil" loading="lazy"></div><div class="dokum-caption"><h4>Prestasi Tartil</h4><p>Prestasi santri dalam cabang Tartil Qur'an</p></div></div>
+        <div class="dokum-item fade-up"><div class="dokum-image"><img src="images/prestasi_tartil2.webp" alt="Prestasi Tartil 2" loading="lazy"></div><div class="dokum-caption"><h4>Prestasi Tartil 2</h4><p>Prestasi santri cabang Tartil Qur'an</p></div></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="cta-section section-padding">
+    <div class="container">
+      <div class="cta-content fade-up">
+        <h2>Ingin Jadi Bagian dari Prestasi Kami?</h2>
+        <p>Daftarkan putra-putri Anda untuk meraih prestasi bersama kami</p>
+        <div class="cta-buttons">
+          <a href="pendaftaran.html" class="btn btn-gold">📝 Daftar Sekarang</a>
+          <a href="kegiatan.html" class="btn btn-outline-light">Lihat Kegiatan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand fade-up"><h3>TPQ &amp; MADIN</h3><p>Lembaga pendidikan Islam yang berkomitmen mencetak generasi Qur'ani yang berakhlak mulia, berilmu, dan berwawasan luas sejak tahun 2013.</p><div class="footer-social"><a href="#" aria-label="Facebook">📘</a><a href="#" aria-label="YouTube">📺</a><a href="#" aria-label="TikTok">🎵</a><a href="#" aria-label="Instagram">📸</a><a href="#" aria-label="Website">🌐</a></div></div>
+        <div class="fade-up"><h4>Navigasi</h4><ul class="footer-links"><li><a href="index.html">Beranda</a></li><li><a href="profil.html">Profil</a></li><li><a href="pendaftaran.html">Pendaftaran</a></li><li><a href="pendidikan.html">Pendidikan</a></li><li><a href="kegiatan.html">Kegiatan</a></li></ul></div>
+        <div class="fade-up"><h4>Lainnya</h4><ul class="footer-links"><li><a href="program-unggulan.html">Program Unggulan</a></li><li><a href="dokumentasi.html">Dokumentasi</a></li><li><a href="data.html">Data & EMIS</a></li><li><a href="kontak.html">Kontak</a></li></ul></div>
+        <div class="fade-up"><h4>Kontak</h4><ul class="footer-contact"><li><span class="contact-icon">📍</span><span>Jl. Pendidikan No. 123, Kelurahan Islami, Kecamatan Qur'ani, Kota 12345</span></li><li><span class="contact-icon">📱</span><span>+62 812-3456-7890</span></li><li><span class="contact-icon">📧</span><span>info@tpqmadin.sch.id</span></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 TPQ & Madrasah Diniyah. All rights reserved.</p><p>Berdedikasi untuk Ummat</p></div>
+    </div>
+  </footer>
+
+  <div class="floating-sosmed">
+    <a href="https://wa.me/6281234567890" class="sosmed-wa" target="_blank" rel="noopener" title="WhatsApp">💬<span class="sosmed-label">WhatsApp</span></a>
+    <a href="#" class="sosmed-fb" target="_blank" rel="noopener" title="Facebook">📘<span class="sosmed-label">Facebook</span></a>
+    <a href="#" class="sosmed-yt" target="_blank" rel="noopener" title="YouTube">📺<span class="sosmed-label">YouTube</span></a>
+    <a href="#" class="sosmed-tt" target="_blank" rel="noopener" title="TikTok">🎵<span class="sosmed-label">TikTok</span></a>
+    <a href="#" class="sosmed-ig" target="_blank" rel="noopener" title="Instagram">📸<span class="sosmed-label">Instagram</span></a>
+    <a href="#" class="sosmed-web" target="_blank" rel="noopener" title="Website">🌐<span class="sosmed-label">Website</span></a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

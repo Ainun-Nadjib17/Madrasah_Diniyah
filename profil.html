@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Profil TPQ & Madrasah Diniyah - Identitas, Visi Misi, Struktur Organisasi">
+  <title>Profil - TPQ & MADIN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700;8..60,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--bg-warm), var(--bg-cream));
+      padding: 140px 0 80px;
+      text-align: center;
+      color: var(--text-dark);
+    }
+    .page-hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 12px; }
+    .page-hero p { opacity: 0.8; font-size: 1.1rem; }
+    .page-hero span { color: var(--gold); }
+
+    .profile-section { background: var(--white); }
+    .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+
+    .identity-card {
+      background: var(--bg-light);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 24px;
+      border-left: 4px solid var(--primary);
+    }
+    .identity-card h4 { color: var(--primary); margin-bottom: 8px; font-size: 1.1rem; }
+    .identity-card p { color: var(--text-muted); line-height: 1.8; }
+
+    .vision-mission-card {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+    .vision-mission-card h4 { color: var(--primary-dark); margin-bottom: 12px; font-size: 1.2rem; }
+    .vision-mission-card p { color: var(--text-muted); line-height: 1.8; }
+    .vision-mission-card ul { margin-top: 12px; }
+    .vision-mission-card ul li {
+      margin-bottom: 10px;
+      padding-left: 24px;
+      position: relative;
+      color: var(--text-muted);
+    }
+    .vision-mission-card ul li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+
+    .org-section {
+      background: var(--bg-light);
+    }
+    .org-tabs {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .org-tab {
+      padding: 12px 28px;
+      border-radius: 50px;
+      border: 2px solid var(--primary);
+      background: transparent;
+      color: var(--primary);
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+    }
+    .org-tab.active, .org-tab:hover { background: var(--primary); color: var(--white); }
+
+    @media (max-width: 768px) {
+      .page-hero { padding: 120px 0 60px; }
+      .page-hero h1 { font-size: 2rem; }
+      .profile-grid { grid-template-columns: 1fr; }
+      .org-tabs { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+          <img src="images/Logo_Madrasah3.webp" alt="Madrasah Diniyah Logo" style="width:45px; height:45px; border-radius:50%; object-fit:cover;">
+          <div class="brand-text">
+            Madrasah Diniyah
+            <span>Lembaga Pendidikan Islam</span>
+          </div>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html" class="active">Profil</a></li>
+          <li><a href="pendaftaran.html">Pendaftaran</a></li>
+          <li><a href="pendidikan.html">Pendidikan</a></li>
+          <li><a href="kegiatan.html">Kegiatan</a></li>
+          <li><a href="program-unggulan.html">Program Unggulan</a></li>
+          <li><a href="dokumentasi.html">Dokumentasi</a></li>
+          <li><a href="data.html">Data</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Profil <span>Lembaga</span></h1>
+      <p>Identitas lengkap, visi misi, dan struktur kepengurusan TPQ & Madrasah Diniyah</p>
+    </div>
+  </section>
+
+  <!-- Identitas TPQ -->
+  <section class="profile-section section-padding">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Identitas</span>
+        <h2 class="section-title">Identitas <span>TPQ</span></h2>
+      </div>
+      <div class="profile-grid">
+        <div class="fade-up">
+          <div class="identity-card">
+            <h4>🏫 Nama Lembaga</h4>
+            <p>Taman Pendidikan Al-Qur'an (TPQ) Roudlotul Qur'an - Lembaga pendidikan Al-Qur'an bagi anak-anak usia dini dan SD.</p>
+          </div>
+          <div class="identity-card">
+            <h4>📍 Lokasi</h4>
+            <p>Jl. Pendidikan No. 123, Kelurahan Islami, Kecamatan Qur'ani, Kota 12345. Berada di lingkungan yang asri dan nyaman untuk belajar.</p>
+          </div>
+          <div class="identity-card">
+            <h4>📅 Tahun Berdiri</h4>
+            <p>Berdiri sejak tahun 2013. Telah meluluskan ratusan santri yang hafal Al-Qur'an dan berakhlak mulia.</p>
+          </div>
+        </div>
+        <div class="fade-up">
+          <div class="identity-card">
+            <h4>👤 Pendiri</h4>
+            <p>KH. Ahmad Zainuddin, M.Ag. - Seorang ulama dan pendidik yang memiliki visi mencetak generasi Qur'ani di tengah masyarakat.</p>
+          </div>
+          <div class="identity-card">
+            <h4>📖 Sejarah Singkat</h4>
+            <p>Berawal dari pengajian kecil di musholla dengan 15 santri, kini berkembang menjadi lembaga pendidikan Al-Qur'an terpadu dengan lebih dari 150 santri aktif dan 20 tenaga pengajar profesional.</p>
+          </div>
+          <div style="background: linear-gradient(135deg, var(--accent-light), var(--primary-light)); border-radius: var(--radius); padding: 40px; text-align: center; margin-top: 24px;">
+            <div style="font-size: 4rem; margin-bottom: 12px;">🕌</div>
+            <h4 style="color: var(--primary-dark);">Lokasi Kami</h4>
+            <p style="color: var(--primary-dark); opacity: 0.8;">Temukan kami di peta untuk kunjungan langsung</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visi & Misi -->
+  <section class="section-padding" style="background: var(--bg-light);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Visi & Misi</span>
+        <h2 class="section-title">Visi & Misi <span>Lembaga</span></h2>
+      </div>
+      <div class="profile-grid">
+        <div class="vision-mission-card fade-up">
+          <h4>🌙 Visi TPQ</h4>
+          <p><em>"Terwujudnya generasi Qur'ani yang cerdas, berakhlak mulia, dan cinta Al-Qur'an sejak usia dini."</em></p>
+        </div>
+        <div class="vision-mission-card fade-up">
+          <h4>🌙 Visi MADIN</h4>
+          <p><em>"Mencetak santri yang berilmu, beriman, bertaqwa, dan berwawasan luas dalam bingkai Al-Qur'an dan Sunnah."</em></p>
+        </div>
+        <div class="vision-mission-card fade-up">
+          <h4>⭐ Misi TPQ</h4>
+          <ul>
+            <li>Mengajarkan baca tulis Al-Qur'an dengan metode Tartil yang benar</li>
+            <li>Menanamkan nilai-nilai akhlakul karimah sejak dini</li>
+            <li>Membiasakan ibadah sholat dan doa harian</li>
+            <li>Mengembangkan bakat dan kreativitas santri</li>
+            <li>Menjalin kerjasama dengan orang tua dalam pendidikan</li>
+          </ul>
+        </div>
+        <div class="vision-mission-card fade-up">
+          <h4>⭐ Misi MADIN</h4>
+          <ul>
+            <li>Menyelenggarakan pendidikan Islam yang komprehensif</li>
+            <li>Mengintegrasikan ilmu agama dan pengetahuan umum</li>
+            <li>Membentuk karakter santri yang mandiri dan bertanggung jawab</li>
+            <li>Menyediakan lingkungan belajar yang kondusif dan islami</li>
+            <li>Mempersiapkan santri untuk melanjutkan ke jenjang pendidikan lebih tinggi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Struktur Organisasi -->
+  <section class="org-section section-padding">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Kepengurusan</span>
+        <h2 class="section-title">Struktur <span>Organisasi</span></h2>
+      </div>
+      <div class="org-tabs fade-up">
+        <button class="org-tab active" onclick="showOrg('tpq', event)">TPQ</button>
+        <button class="org-tab" onclick="showOrg('madin', event)">MADIN</button>
+      </div>
+      <div id="org-tpq" class="fade-up">
+        <div class="org-header-card" style="margin-bottom:40px;">
+          <h3>🏛️ Struktur Organisasi TPQ</h3>
+          <p>Taman Pendidikan Al-Qur'an Roudlotul Qur'an</p>
+        </div>
+        <div class="org-grid">
+          <div class="org-member"><div class="org-member-avatar">👤</div><h5>Kepala TPQ</h5><p>Ustadz. Ahmad Fauzi</p></div>
+          <div class="org-member"><div class="org-member-avatar">👤</div><h5>Wakil Kepala</h5><p>Ustadz. Nur Hidayat</p></div>
+          <div class="org-member"><div class="org-member-avatar">👤</div><h5>Sekretaris</h5><p>Ustadzah. Siti Aminah</p></div>
+          <div class="org-member"><div class="org-member-avatar">👤</div><h5>Bendahara</h5><p>Ustadzah. Fatimah</p></div>
+        </div>
+      </div>
+      <div id="org-madin" class="fade-up" style="display:none;">
+        <div class="org-header-card" style="margin-bottom:40px; background: linear-gradient(135deg, #d4a373, #e9c46a);">
+          <h3>🏛️ Struktur Organisasi MADIN</h3>
+          <p>Madrasah Diniyah Roudlotul Qur'an</p>
+        </div>
+        <div class="org-grid">
+          <div class="org-member"><div class="org-member-avatar">👤</div><h5>Kepala MADIN</h5><p>Ustadz. Muhammad Iqbal</p></div>
+          <div class="org-member"><div class="org-member-avatar">👤</div><h5>Wakil Kepala</h5><p>Ustadz. Abdul Malik</p></div>
+          <div class="org-member"><div class="org-member-avatar">👤</div><h5>Sekretaris</h5><p>Ustadzah. Khadijah</p></div>
+          <div class="org-member"><div class="org-member-avatar">👤</div><h5>Bendahara</h5><p>Ustadzah. Aisyah</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section section-padding">
+    <div class="container">
+      <div class="cta-content fade-up">
+        <h2>Ingin Tahu Lebih Banyak?</h2>
+        <p>Kunjungi lembaga kami secara langsung atau hubungi kami untuk informasi lebih lanjut</p>
+        <div class="cta-buttons">
+          <a href="kontak.html" class="btn btn-gold">Hubungi Kami</a>
+          <a href="pendaftaran.html" class="btn btn-outline-light">Daftar Sekarang</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand fade-up">
+          <h3>TPQ &amp; MADIN</h3>
+          <p>Lembaga pendidikan Islam yang berkomitmen mencetak generasi Qur'ani yang berakhlak mulia, berilmu, dan berwawasan luas sejak tahun 2013.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="YouTube">📺</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="Website">🌐</a>
+          </div>
+        </div>
+        <div class="fade-up">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            <li><a href="pendidikan.html">Pendidikan</a></li>
+            <li><a href="kegiatan.html">Kegiatan</a></li>
+          </ul>
+        </div>
+        <div class="fade-up">
+          <h4>Lainnya</h4>
+          <ul class="footer-links">
+            <li><a href="program-unggulan.html">Program Unggulan</a></li>
+            <li><a href="dokumentasi.html">Dokumentasi</a></li>
+            <li><a href="data.html">Data & EMIS</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="fade-up">
+          <h4>Kontak</h4>
+          <ul class="footer-contact">
+            <li><span class="contact-icon">📍</span><span>Jl. Pendidikan No. 123, Kelurahan Islami, Kecamatan Qur'ani, Kota 12345</span></li>
+            <li><span class="contact-icon">📱</span><span>+62 812-3456-7890</span></li>
+            <li><span class="contact-icon">📧</span><span>info@tpqmadin.sch.id</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TPQ & Madrasah Diniyah. All rights reserved.</p>
+        <p>Berdedikasi untuk Ummat</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-sosmed">
+    <a href="https://wa.me/6281234567890" class="sosmed-wa" target="_blank" rel="noopener" title="WhatsApp">💬<span class="sosmed-label">WhatsApp</span></a>
+    <a href="#" class="sosmed-fb" target="_blank" rel="noopener" title="Facebook">📘<span class="sosmed-label">Facebook</span></a>
+    <a href="#" class="sosmed-yt" target="_blank" rel="noopener" title="YouTube">📺<span class="sosmed-label">YouTube</span></a>
+    <a href="#" class="sosmed-tt" target="_blank" rel="noopener" title="TikTok">🎵<span class="sosmed-label">TikTok</span></a>
+    <a href="#" class="sosmed-ig" target="_blank" rel="noopener" title="Instagram">📸<span class="sosmed-label">Instagram</span></a>
+    <a href="#" class="sosmed-web" target="_blank" rel="noopener" title="Website">🌐<span class="sosmed-label">Website</span></a>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function showOrg(type, e) {
+      document.querySelectorAll('.org-tab').forEach(t => t.classList.remove('active'));
+      e.target.classList.add('active');
+      document.getElementById('org-tpq').style.display = type === 'tpq' ? 'block' : 'none';
+      document.getElementById('org-madin').style.display = type === 'madin' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>

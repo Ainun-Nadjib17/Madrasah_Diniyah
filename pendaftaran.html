@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pendaftaran Santri Baru TPQ & Madrasah Diniyah">
+  <title>Pendaftaran - TPQ & MADIN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700;8..60,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero { background: linear-gradient(135deg, var(--bg-warm), var(--bg-cream)); padding: 140px 0 80px; text-align: center; color: var(--text-dark); }
+    .page-hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 12px; }
+    .page-hero p { color: var(--text-muted); font-size: 1.1rem; }
+    .page-hero span { color: var(--secondary); }
+
+    .form-section { background: var(--bg-light); }
+
+    .schedule-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .schedule-table th { background: var(--primary); color: var(--white); padding: 14px 20px; text-align: left; font-weight: 600; }
+    .schedule-table td { padding: 14px 20px; border-bottom: 1px solid #e9ecef; color: var(--text-muted); }
+    .schedule-table tr:hover td { background: rgba(45, 106, 79, 0.03); }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+          <img src="images/Logo_Madrasah3.webp" alt="Madrasah Diniyah Logo" style="width:45px; height:45px; border-radius:50%; object-fit:cover;">
+          <div class="brand-text">
+            Madrasah Diniyah
+            <span>Lembaga Pendidikan Islam</span>
+          </div>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="pendaftaran.html" class="active">Pendaftaran</a></li>
+          <li><a href="pendidikan.html">Pendidikan</a></li>
+          <li><a href="kegiatan.html">Kegiatan</a></li>
+          <li><a href="program-unggulan.html">Program Unggulan</a></li>
+          <li><a href="dokumentasi.html">Dokumentasi</a></li>
+          <li><a href="data.html">Data</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Pendaftaran <span>Santri Baru</span></h1>
+      <p>Download formulir dan lihat informasi biaya pendaftaran santri baru TPQ & Madrasah Diniyah</p>
+    </div>
+  </section>
+
+  <!-- Download Formulir -->
+  <section class="section-padding" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Formulir</span>
+        <h2 class="section-title">Download <span>Formulir</span></h2>
+        <p class="section-subtitle">Download formulir pendaftaran untuk TPQ & Madrasah Diniyah</p>
+      </div>
+      <div class="fade-up" style="text-align:center; max-width:500px; margin:0 auto; background:var(--bg-container); padding:60px 40px; border-radius:var(--radius-lg); box-shadow:var(--shadow); border:1px solid rgba(6,78,59,0.06);">
+        <div style="font-size:5rem; margin-bottom:20px;">📥</div>
+        <h3 style="font-family:var(--font-heading); font-size:1.5rem; color:var(--primary-dark); margin-bottom:12px;">Formulir Pendaftaran</h3>
+        <p style="color:var(--text-muted); margin-bottom:32px; line-height:1.8;">
+          Klik tombol di bawah untuk mendownload formulir pendaftaran. 
+          Isi dan serahkan ke kantor TPQ & MADIN terdekat.
+        </p>
+        <a href="#" class="btn btn-gold" style="font-size:1.1rem; padding:18px 48px;">
+          📥 Download Formulir PDF
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Biaya & Registrasi -->
+  <section class="section-padding" style="background: var(--bg-light);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Biaya</span>
+        <h2 class="section-title">Biaya & <span>Registrasi</span></h2>
+        <p class="section-subtitle">Informasi biaya pendaftaran dan pendidikan TPQ & Madrasah Diniyah</p>
+      </div>
+      <div class="fade-up" style="max-width:800px; margin:0 auto; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-lg);">
+        <img src="images/Informasi_Pendaftaran.webp" alt="Informasi Pendaftaran" style="width:100%; height:auto; object-fit:cover; display:block;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Jam Aktif Belajar -->
+  <section class="section-padding" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Jadwal</span>
+        <h2 class="section-title">Jam Aktif <span>Belajar</span></h2>
+        <p class="section-subtitle">Jadwal kegiatan belajar mengajar TPQ & Madrasah Diniyah</p>
+      </div>
+      <div class="fade-up" style="overflow-x: auto;">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Hari</th>
+              <th>TPQ (Pagi)</th>
+              <th>TPQ (Sore)</th>
+              <th>MADIN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Senin</strong></td>
+              <td>07:30 - 09:00</td>
+              <td>15:00 - 16:30</td>
+              <td>13:00 - 15:00</td>
+            </tr>
+            <tr>
+              <td><strong>Selasa</strong></td>
+              <td>07:30 - 09:00</td>
+              <td>15:00 - 16:30</td>
+              <td>13:00 - 15:00</td>
+            </tr>
+            <tr>
+              <td><strong>Rabu</strong></td>
+              <td>07:30 - 09:00</td>
+              <td>15:00 - 16:30</td>
+              <td>13:00 - 15:00</td>
+            </tr>
+            <tr>
+              <td><strong>Kamis</strong></td>
+              <td>07:30 - 09:00</td>
+              <td>15:00 - 16:30</td>
+              <td>13:00 - 15:00</td>
+            </tr>
+            <tr>
+              <td><strong>Jum'at</strong></td>
+              <td>07:30 - 09:00</td>
+              <td>15:00 - 16:00</td>
+              <td>13:00 - 14:30</td>
+            </tr>
+            <tr>
+              <td><strong>Sabtu</strong></td>
+              <td>07:30 - 09:00</td>
+              <td>-</td>
+              <td>Ekstrakurikuler</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Pendaftaran -->
+  <section class="form-section section-padding">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Daftar</span>
+        <h2 class="section-title">Formulir <span>Pendaftaran</span></h2>
+        <p class="section-subtitle">Klik tombol di bawah untuk mengisi formulir pendaftaran online</p>
+      </div>
+      <div class="fade-up" style="text-align:center; max-width:600px; margin:0 auto; background:var(--bg-container); padding:60px 40px; border-radius:var(--radius-lg); box-shadow:var(--shadow); border:1px solid rgba(6,78,59,0.06);">
+        <div style="font-size:5rem; margin-bottom:20px;">📝</div>
+        <h3 style="font-family:var(--font-heading); font-size:1.5rem; color:var(--primary-dark); margin-bottom:12px;">Pendaftaran Online TPQ & MADIN</h3>
+        <p style="color:var(--text-muted); margin-bottom:32px; line-height:1.8;">
+          Silahkan klik tombol di bawah untuk mengisi formulir pendaftaran melalui Google Form.
+          Setelah mengirim, kami akan menghubungi Anda dalam 1x24 jam.
+        </p>
+        <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:1.1rem; padding:18px 48px;">
+          ✏️ Isi Google Form
+        </a>
+        <p style="margin-top:16px; font-size:0.85rem; color:var(--text-muted);">
+          Atau <a href="#" style="color:var(--primary); font-weight:600;">download formulir PDF</a> untuk pendaftaran offline
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section section-padding">
+    <div class="container">
+      <div class="cta-content fade-up">
+        <h2>Ada Pertanyaan?</h2>
+        <p>Hubungi kami untuk informasi lebih lanjut mengenai pendaftaran</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/6281234567890" class="btn btn-gold">💬 Chat WhatsApp</a>
+          <a href="kontak.html" class="btn btn-outline-light">Kontak Kami</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand fade-up">
+          <h3>TPQ &amp; MADIN</h3>
+          <p>Lembaga pendidikan Islam yang berkomitmen mencetak generasi Qur'ani yang berakhlak mulia, berilmu, dan berwawasan luas sejak tahun 2013.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="YouTube">📺</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="Website">🌐</a>
+          </div>
+        </div>
+        <div class="fade-up">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            <li><a href="pendidikan.html">Pendidikan</a></li>
+            <li><a href="kegiatan.html">Kegiatan</a></li>
+          </ul>
+        </div>
+        <div class="fade-up">
+          <h4>Lainnya</h4>
+          <ul class="footer-links">
+            <li><a href="program-unggulan.html">Program Unggulan</a></li>
+            <li><a href="dokumentasi.html">Dokumentasi</a></li>
+            <li><a href="data.html">Data & EMIS</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="fade-up">
+          <h4>Kontak</h4>
+          <ul class="footer-contact">
+            <li><span class="contact-icon">📍</span><span>Jl. Pendidikan No. 123, Kelurahan Islami, Kecamatan Qur'ani, Kota 12345</span></li>
+            <li><span class="contact-icon">📱</span><span>+62 812-3456-7890</span></li>
+            <li><span class="contact-icon">📧</span><span>info@tpqmadin.sch.id</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TPQ & Madrasah Diniyah. All rights reserved.</p>
+        <p>Berdedikasi untuk Ummat</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-sosmed">
+    <a href="https://wa.me/6281234567890" class="sosmed-wa" target="_blank" rel="noopener" title="WhatsApp">💬<span class="sosmed-label">WhatsApp</span></a>
+    <a href="#" class="sosmed-fb" target="_blank" rel="noopener" title="Facebook">📘<span class="sosmed-label">Facebook</span></a>
+    <a href="#" class="sosmed-yt" target="_blank" rel="noopener" title="YouTube">📺<span class="sosmed-label">YouTube</span></a>
+    <a href="#" class="sosmed-tt" target="_blank" rel="noopener" title="TikTok">🎵<span class="sosmed-label">TikTok</span></a>
+    <a href="#" class="sosmed-ig" target="_blank" rel="noopener" title="Instagram">📸<span class="sosmed-label">Instagram</span></a>
+    <a href="#" class="sosmed-web" target="_blank" rel="noopener" title="Website">🌐<span class="sosmed-label">Website</span></a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

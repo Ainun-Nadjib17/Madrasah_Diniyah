@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Program Unggulan TPQ & Madrasah Diniyah - Tartil Qur'an, Pencak Silat, Al-Banjari">
+  <title>Program Unggulan - TPQ & MADIN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700;8..60,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero { background: linear-gradient(135deg, var(--bg-warm), var(--bg-cream)); padding: 140px 0 80px; text-align: center; color: var(--text-dark); }
+    .page-hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 12px; }
+    .page-hero p { color: var(--text-muted); font-size: 1.1rem; }
+    .page-hero span { color: var(--secondary); }
+
+    .program-hero-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); margin-bottom: 40px; transition: var(--transition); }
+    .program-hero-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+    .program-hero-image { display: grid; gap: 4px; padding: 8px; background: #f0f4f0; }
+    .program-hero-image.tartil { grid-template-columns: 1fr 1fr; }
+    .program-hero-image.silat { grid-template-columns: 1fr 1fr; }
+    .program-hero-image.banjari { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
+    .program-hero-image.banjari img:first-child { grid-column: 1 / -1; }
+    .program-hero-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; cursor: pointer; transition: var(--transition); min-height: 200px; }
+    .program-hero-image img:hover { transform: scale(1.02); box-shadow: var(--shadow); }
+    .program-hero-body { padding: 40px 40px 32px; display: flex; flex-direction: column; justify-content: center; }
+    .program-hero-body .program-badge { display: inline-block; background: linear-gradient(135deg, var(--primary), var(--accent)); color: var(--white); padding: 6px 18px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; margin-bottom: 12px; align-self: flex-start; }
+    .program-hero-body h3 { font-size: 1.8rem; color: var(--primary-dark); margin-bottom: 12px; }
+    .program-hero-body p { color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
+    .program-hero-body ul { list-style: none; margin-bottom: 20px; }
+    .program-hero-body ul li { padding: 6px 0; display: flex; align-items: center; gap: 10px; color: var(--text-muted); font-size: 0.95rem; }
+    .program-hero-body ul li::before { content: '✦'; color: var(--primary); }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2rem; }
+      .program-hero-card { grid-template-columns: 1fr; }
+      .program-hero-image { min-height: 220px; }
+      .program-hero-body { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+          <img src="images/Logo_Madrasah3.webp" alt="Madrasah Diniyah Logo" style="width:45px; height:45px; border-radius:50%; object-fit:cover;">
+          <div class="brand-text">
+            Madrasah Diniyah
+            <span>Lembaga Pendidikan Islam</span>
+          </div>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="pendaftaran.html">Pendaftaran</a></li>
+          <li><a href="pendidikan.html">Pendidikan</a></li>
+          <li><a href="kegiatan.html">Kegiatan</a></li>
+          <li><a href="program-unggulan.html" class="active">Program Unggulan</a></li>
+          <li><a href="dokumentasi.html">Dokumentasi</a></li>
+          <li><a href="data.html">Data</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Program <span>Unggulan</span></h1>
+      <p>Program khas yang menjadi ciri khas dan kebanggaan lembaga kami</p>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background: var(--bg-light);">
+    <div class="container">
+
+      <!-- Tartil Qur'an -->
+      <div class="program-hero-card fade-up">
+        <div class="program-hero-image tartil">
+          <img src="images/Prestasi_Tartil.webp" alt="Tartil Qur'an" onclick="openLightbox(this.src)">
+          <img src="images/prestasi_tartil2.webp" alt="Prestasi Tartil Qur'an" onclick="openLightbox(this.src)">
+        </div>
+        <div class="program-hero-body">
+          <span class="program-badge">Program Unggulan #1</span>
+          <h3>Tartil Qur'an</h3>
+          <p>Program pembelajaran membaca Al-Qur'an dengan metode Tartil yang mudah dipahami dan dipraktikkan. Santri akan belajar dari dasar hingga mahir membaca Al-Qur'an sesuai kaidah tajwid yang benar.</p>
+          <ul>
+            <li>Metode pembelajaran bertahap dan sistematis</li>
+            <li>Dibimbing oleh pengajar bersanad Al-Qur'an</li>
+            <li>Target: Bisa membaca Al-Qur'an dengan tartil</li>
+            <li>Program tahfidz untuk santri berprestasi</li>
+            <li>Sertifikat kelulusan berskala nasional</li>
+          </ul>
+          <a href="pendaftaran.html" class="btn btn-primary">Daftar Program Ini</a>
+        </div>
+      </div>
+
+      <!-- Pencak Silat -->
+      <div class="program-hero-card fade-up">
+        <div class="program-hero-image silat">
+          <img src="images/Pencak_Silat.webp" alt="Pencak Silat" onclick="openLightbox(this.src)">
+          <img src="images/Pencak_Silat2.webp" alt="Pencak Silat Santri" onclick="openLightbox(this.src)">
+        </div>
+        <div class="program-hero-body">
+          <span class="program-badge">Program Unggulan #2</span>
+          <h3>Pencak Silat</h3>
+          <p>Seni bela diri tradisional yang tidak hanya mengajarkan teknik pembelaan diri, tetapi juga nilai-nilai kedisiplinan, keberanian, dan akhlak mulia sesuai ajaran Islam.</p>
+          <ul>
+            <li>Pelatih bersertifikat nasional</li>
+            <li>Latihan rutin setiap Sabtu</li>
+            <li>Pembentukan karakter disiplin dan percaya diri</li>
+            <li>Mengikuti kejuaraan silat regional</li>
+            <li>Prestasi: Juara 1 Silat tingkat kota</li>
+          </ul>
+          <a href="pendaftaran.html" class="btn btn-primary">Daftar Program Ini</a>
+        </div>
+      </div>
+
+      <!-- Al-Banjari -->
+      <div class="program-hero-card fade-up">
+        <div class="program-hero-image banjari">
+          <img src="images/Al-banjari1.webp" alt="Al-Banjari" onclick="openLightbox(this.src)">
+          <img src="images/Al-banjari2.webp" alt="Penampilan Al-Banjari" onclick="openLightbox(this.src)">
+          <img src="images/Al-banjari3.webp" alt="Al-Banjari Santri" onclick="openLightbox(this.src)">
+        </div>
+        <div class="program-hero-body">
+          <span class="program-badge">Program Unggulan #3</span>
+          <h3>Al-Banjari</h3>
+          <p>Seni rebana dan sholawat modern yang mengembangkan bakat seni Islami santri. Menampilkan musik rebana dengan iringan sholawat yang indah dan menyentuh hati.</p>
+          <ul>
+            <li>Pembimbing ahli seni rebana profesional</li>
+            <li>Tampil di berbagai acara keagamaan</li>
+            <li>Mengembangkan kreativitas dan bakat seni</li>
+            <li>Menumbuhkan kecintaan pada sholawat Nabi</li>
+            <li>Prestasi: Juara 2 Festival Al-Banjari</li>
+          </ul>
+          <a href="pendaftaran.html" class="btn btn-primary">Daftar Program Ini</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section section-padding">
+    <div class="container">
+      <div class="cta-content fade-up">
+        <h2>Pilih Program Unggulan Favoritmu</h2>
+        <p>Setiap program dirancang untuk mengembangkan potensi terbaik santri</p>
+        <div class="cta-buttons">
+          <a href="pendaftaran.html" class="btn btn-gold">📝 Daftar Sekarang</a>
+          <a href="dokumentasi.html" class="btn btn-outline-light">Lihat Dokumentasi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand fade-up">
+          <h3>TPQ &amp; MADIN</h3>
+          <p>Lembaga pendidikan Islam yang berkomitmen mencetak generasi Qur'ani yang berakhlak mulia, berilmu, dan berwawasan luas sejak tahun 2013.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="YouTube">📺</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="Website">🌐</a>
+          </div>
+        </div>
+        <div class="fade-up">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            <li><a href="pendidikan.html">Pendidikan</a></li>
+            <li><a href="kegiatan.html">Kegiatan</a></li>
+          </ul>
+        </div>
+        <div class="fade-up">
+          <h4>Lainnya</h4>
+          <ul class="footer-links">
+            <li><a href="program-unggulan.html">Program Unggulan</a></li>
+            <li><a href="dokumentasi.html">Dokumentasi</a></li>
+            <li><a href="data.html">Data & EMIS</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="fade-up">
+          <h4>Kontak</h4>
+          <ul class="footer-contact">
+            <li><span class="contact-icon">📍</span><span>Jl. Pendidikan No. 123, Kelurahan Islami, Kecamatan Qur'ani, Kota 12345</span></li>
+            <li><span class="contact-icon">📱</span><span>+62 812-3456-7890</span></li>
+            <li><span class="contact-icon">📧</span><span>info@tpqmadin.sch.id</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TPQ & Madrasah Diniyah. All rights reserved.</p>
+        <p>Berdedikasi untuk Ummat</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-sosmed">
+    <a href="https://wa.me/6281234567890" class="sosmed-wa" target="_blank" rel="noopener" title="WhatsApp">💬<span class="sosmed-label">WhatsApp</span></a>
+    <a href="#" class="sosmed-fb" target="_blank" rel="noopener" title="Facebook">📘<span class="sosmed-label">Facebook</span></a>
+    <a href="#" class="sosmed-yt" target="_blank" rel="noopener" title="YouTube">📺<span class="sosmed-label">YouTube</span></a>
+    <a href="#" class="sosmed-tt" target="_blank" rel="noopener" title="TikTok">🎵<span class="sosmed-label">TikTok</span></a>
+    <a href="#" class="sosmed-ig" target="_blank" rel="noopener" title="Instagram">📸<span class="sosmed-label">Instagram</span></a>
+    <a href="#" class="sosmed-web" target="_blank" rel="noopener" title="Website">🌐<span class="sosmed-label">Website</span></a>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function openLightbox(src) {
+      const lightbox = document.createElement('div');
+      lightbox.className = 'lightbox';
+      lightbox.innerHTML = `
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-content">
+          <img src="${src}" style="max-width:90vw; max-height:80vh; border-radius:12px; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+          <button class="lightbox-close">&times;</button>
+        </div>
+      `;
+      document.body.appendChild(lightbox);
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(() => lightbox.classList.add('active'));
+
+      const close = () => {
+        lightbox.classList.remove('active');
+        setTimeout(() => { lightbox.remove(); document.body.style.overflow = ''; }, 300);
+      };
+      lightbox.querySelector('.lightbox-overlay').addEventListener('click', close);
+      lightbox.querySelector('.lightbox-close').addEventListener('click', close);
+      document.addEventListener('keydown', function esc(e) {
+        if (e.key === 'Escape') { close(); document.removeEventListener('keydown', esc); }
+      });
+    }
+  </script>
+</body>
+</html>

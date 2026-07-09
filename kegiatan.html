@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kegiatan Rutin, Ekstrakurikuler & Fasilitas TPQ & Madrasah Diniyah">
+  <title>Kegiatan - TPQ & MADIN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700;8..60,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero { background: linear-gradient(135deg, var(--bg-warm), var(--bg-cream)); padding: 140px 0 80px; text-align: center; color: var(--text-dark); }
+    .page-hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 12px; }
+    .page-hero p { color: var(--text-muted); font-size: 1.1rem; }
+    .page-hero span { color: var(--secondary); }
+
+    .activity-card { display: grid; grid-template-columns: 300px 1fr; gap: 30px; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); margin-bottom: 24px; transition: var(--transition); }
+    .activity-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+    .activity-image { min-height: 220px; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+    .activity-card:nth-child(1) .activity-image { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+    .activity-card:nth-child(2) .activity-image { background: linear-gradient(135deg, #fff3e0, #ffe0b2); }
+    .activity-card:nth-child(3) .activity-image { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+    .activity-card:nth-child(4) .activity-image { background: linear-gradient(135deg, #fce4ec, #f8bbd0); }
+    .activity-card:nth-child(5) .activity-image { background: linear-gradient(135deg, #f3e5f5, #e1bee7); }
+    .activity-body { padding: 32px 32px 32px 0; display: flex; flex-direction: column; justify-content: center; }
+    .activity-body h3 { font-size: 1.3rem; color: var(--primary-dark); margin-bottom: 8px; }
+    .activity-body p { color: var(--text-muted); line-height: 1.8; margin-bottom: 12px; }
+    .activity-body .activity-tag { display: inline-block; background: rgba(45, 106, 79, 0.08); color: var(--primary); padding: 4px 14px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; }
+
+    .ekskul-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .ekskul-card { background: var(--white); border-radius: var(--radius); padding: 32px; text-align: center; box-shadow: var(--shadow); transition: var(--transition); }
+    .ekskul-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+    .ekskul-icon { font-size: 3rem; margin-bottom: 16px; }
+    .ekskul-card h4 { font-size: 1.15rem; color: var(--primary-dark); margin-bottom: 8px; }
+    .ekskul-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+
+    .fasilitas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+    .fasilitas-item { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 3rem; color: var(--white); text-align: center; }
+    .fasilitas-item p { font-size: 1rem; font-weight: 600; margin-top: 12px; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+    .fasilitas-item:nth-child(1) { background: linear-gradient(135deg, #2d6a4f, #40916c); }
+    .fasilitas-item:nth-child(2) { background: linear-gradient(135deg, #d4a373, #e9c46a); }
+    .fasilitas-item:nth-child(3) { background: linear-gradient(135deg, #1b4332, #2d6a4f); }
+    .fasilitas-item:nth-child(4) { background: linear-gradient(135deg, #52b788, #95d5b2); }
+    .fasilitas-item:nth-child(5) { background: linear-gradient(135deg, #e9c46a, #f4a261); }
+    .fasilitas-item:nth-child(6) { background: linear-gradient(135deg, #40916c, #52b788); }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2rem; }
+      .activity-card { grid-template-columns: 1fr; }
+      .activity-image { min-height: 180px; }
+      .activity-body { padding: 20px; }
+      .ekskul-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+          <img src="images/Logo_Madrasah3.webp" alt="Madrasah Diniyah Logo" style="width:45px; height:45px; border-radius:50%; object-fit:cover;">
+          <div class="brand-text">
+            Madrasah Diniyah
+            <span>Lembaga Pendidikan Islam</span>
+          </div>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="pendaftaran.html">Pendaftaran</a></li>
+          <li><a href="pendidikan.html">Pendidikan</a></li>
+          <li><a href="kegiatan.html" class="active">Kegiatan</a></li>
+          <li><a href="program-unggulan.html">Program Unggulan</a></li>
+          <li><a href="dokumentasi.html">Dokumentasi</a></li>
+          <li><a href="data.html">Data</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Kegiatan <span>Kami</span></h1>
+      <p>Dokumentasi kegiatan rutin, ekstrakurikuler, dan fasilitas TPQ & Madrasah Diniyah</p>
+    </div>
+  </section>
+
+  <!-- Kegiatan Rutin -->
+  <section class="section-padding" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Rutinitas</span>
+        <h2 class="section-title">Kegiatan <span>Rutin</span></h2>
+        <p class="section-subtitle">Kegiatan mingguan, bulanan, dan tahunan yang menjadi program unggulan lembaga</p>
+      </div>
+      
+      <div class="activity-card fade-up">
+        <div class="activity-image" style="display:flex; gap:6px; padding:12px; flex-wrap:wrap; align-content:center; justify-content:center;">
+          <img src="images/Anak_Ngaji3.webp" alt="Mengaji" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+          <img src="images/Anak_Ngaji4.webp" alt="Mengaji Santri" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+          <img src="images/Anak_Ngaji5.webp" alt="Belajar Al-Qur'an" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+          <img src="images/Anak_Ngaji6.webp" alt="Santri Mengaji" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+        </div>
+        <div class="activity-body">
+          <span class="activity-tag">Mingguan</span>
+          <h3>Kelas Mengaji & Tahsin</h3>
+          <p>Kegiatan rutin belajar membaca Al-Qur'an dengan metode tartil yang benar sesuai kaidah tajwid. Dilaksanakan setiap hari Senin - Jum'at dengan bimbingan ustadz/ustadzah profesional.</p>
+        </div>
+      </div>
+
+
+      <div class="activity-card fade-up">
+        <div class="activity-image" style="display:flex; gap:6px; padding:12px; flex-wrap:wrap; align-content:center; justify-content:center;">
+          <img src="images/Pencak_Silat.webp" alt="Pencak Silat" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+          <img src="images/Pencak_Silat2.webp" alt="Latihan Silat" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+        </div>
+        <div class="activity-body">
+          <span class="activity-tag">Bulanan</span>
+          <h3>Kegiatan Perlombaan</h3>
+          <p>Lomba-lomba islami antar santri seperti MTQ, pidato, dan kaligrafi yang diadakan setiap bulan untuk mengasah bakat dan prestasi.</p>
+        </div>
+      </div>
+
+      <div class="activity-card fade-up">
+        <div class="activity-image" style="display:flex; gap:6px; padding:12px; flex-wrap:wrap; align-content:center; justify-content:center;">
+          <img src="images/Al-banjari1.webp" alt="Al-Banjari" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+          <img src="images/Al-banjari3.webp" alt="Penampilan Al-Banjari" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+        </div>
+        <div class="activity-body">
+          <span class="activity-tag">Bulanan</span>
+          <h3>Lomba Santri Teladan</h3>
+          <p>Seleksi santri teladan setiap bulan untuk memotivasi santri dalam meningkatkan prestasi akademik dan akhlak mulia.</p>
+        </div>
+      </div>
+
+      <div class="activity-card fade-up">
+        <div class="activity-image" style="display:flex; gap:6px; padding:12px; flex-wrap:wrap; align-content:center; justify-content:center;">
+          <img src="images/Acara_Rutinan3.jpeg" alt="Acara Rutinan" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+          <img src="images/Acara_Rutinan5.webp" alt="Kegiatan Tahunan" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+        </div>
+        <div class="activity-body">
+          <span class="activity-tag">Tahunan</span>
+          <h3>Peringatan Hari Besar Islam</h3>
+          <p>Peringatan Maulid Nabi, Isra Mi'raj, dan hari besar Islam lainnya dengan berbagai lomba dan kegiatan islami yang meriah.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ekstrakurikuler -->
+  <section class="section-padding" style="background: var(--bg-light);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Ekskul</span>
+        <h2 class="section-title">Ekstrakurikuler <span>Aktif</span></h2>
+        <p class="section-subtitle">Kegiatan pengembangan bakat dan minat santri di luar jam pelajaran</p>
+      </div>
+      <div class="ekskul-grid">
+        <div class="ekskul-card fade-up">
+          <div style="display:flex; gap:6px; margin-bottom:16px; justify-content:center;">
+            <img src="images/Prestasi_Tartil.webp" alt="Tartil Qur'an" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+            <img src="images/prestasi_tartil2.webp" alt="Prestasi Tartil" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+          </div>
+          <h4>Tartil Qur'an</h4>
+          <p>Program khusus memperdalam bacaan Al-Qur'an dengan tartil dan tahsin untuk mencapai bacaan yang sempurna.</p>
+        </div>
+        <div class="ekskul-card fade-up">
+          <div style="display:flex; gap:6px; margin-bottom:16px; justify-content:center;">
+            <img src="images/Pencak_Silat.webp" alt="Pencak Silat" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+            <img src="images/Pencak_Silat2.webp" alt="Pencak Silat Santri" style="width:calc(50% - 3px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+          </div>
+          <h4>Pencak Silat</h4>
+          <p>Seni bela diri tradisional yang membentuk kedisiplinan, keberanian, dan kebugaran fisik santri.</p>
+        </div>
+        <div class="ekskul-card fade-up">
+          <div style="display:flex; gap:6px; margin-bottom:16px; justify-content:center; flex-wrap:wrap;">
+            <img src="images/Al-banjari1.webp" alt="Al-Banjari" style="width:calc(33.33% - 4px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+            <img src="images/Al-banjari2.webp" alt="Penampilan Al-Banjari" style="width:calc(33.33% - 4px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+            <img src="images/Al-banjari3.webp" alt="Al-Banjari Santri" style="width:calc(33.33% - 4px); aspect-ratio:1; border-radius:var(--radius-sm); object-fit:cover;">
+          </div>
+          <h4>Al-Banjari</h4>
+          <p>Seni rebana dan sholawat modern yang mengembangkan bakat seni Islami dan kreativitas santri.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fasilitas -->
+  <section class="section-padding" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Fasilitas</span>
+        <h2 class="section-title">Fasilitas <span>Lembaga</span></h2>
+        <p class="section-subtitle">Sarana dan prasarana pendukung kegiatan belajar mengajar</p>
+      </div>
+      <div class="fasilitas-grid">
+        <div class="fasilitas-item fade-up">
+          🕌
+          <p>Ruang Kelas Nyaman</p>
+        </div>
+        <div class="fasilitas-item fade-up">
+          📚
+          <p>Perpustakaan</p>
+        </div>
+        <div class="fasilitas-item fade-up">
+          🏟️
+          <p>Lapangan Olahraga</p>
+        </div>
+        <div class="fasilitas-item fade-up">
+          🎵
+          <p>Ruang Musik & Rebana</p>
+        </div>
+        <div class="fasilitas-item fade-up">
+          🍽️
+          <p>Kantin Sehat</p>
+        </div>
+        <div class="fasilitas-item fade-up">
+          🚐
+          <p>Area Parkir Luas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section section-padding">
+    <div class="container">
+      <div class="cta-content fade-up">
+        <h2>Tertarik Bergabung?</h2>
+        <p>Daftarkan putra-putri Anda untuk merasakan berbagai kegiatan positif di lembaga kami</p>
+        <div class="cta-buttons">
+          <a href="pendaftaran.html" class="btn btn-gold">📝 Daftar Sekarang</a>
+          <a href="dokumentasi.html" class="btn btn-outline-light">Lihat Dokumentasi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand fade-up">
+          <h3>TPQ &amp; MADIN</h3>
+          <p>Lembaga pendidikan Islam yang berkomitmen mencetak generasi Qur'ani yang berakhlak mulia, berilmu, dan berwawasan luas sejak tahun 2013.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="YouTube">📺</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="Website">🌐</a>
+          </div>
+        </div>
+        <div class="fade-up">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            <li><a href="pendidikan.html">Pendidikan</a></li>
+            <li><a href="kegiatan.html">Kegiatan</a></li>
+          </ul>
+        </div>
+        <div class="fade-up">
+          <h4>Lainnya</h4>
+          <ul class="footer-links">
+            <li><a href="program-unggulan.html">Program Unggulan</a></li>
+            <li><a href="dokumentasi.html">Dokumentasi</a></li>
+            <li><a href="data.html">Data & EMIS</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="fade-up">
+          <h4>Kontak</h4>
+          <ul class="footer-contact">
+            <li><span class="contact-icon">📍</span><span>Jl. Pendidikan No. 123, Kelurahan Islami, Kecamatan Qur'ani, Kota 12345</span></li>
+            <li><span class="contact-icon">📱</span><span>+62 812-3456-7890</span></li>
+            <li><span class="contact-icon">📧</span><span>info@tpqmadin.sch.id</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TPQ & Madrasah Diniyah. All rights reserved.</p>
+        <p>Berdedikasi untuk Ummat</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-sosmed">
+    <a href="https://wa.me/6281234567890" class="sosmed-wa" target="_blank" rel="noopener" title="WhatsApp">💬<span class="sosmed-label">WhatsApp</span></a>
+    <a href="#" class="sosmed-fb" target="_blank" rel="noopener" title="Facebook">📘<span class="sosmed-label">Facebook</span></a>
+    <a href="#" class="sosmed-yt" target="_blank" rel="noopener" title="YouTube">📺<span class="sosmed-label">YouTube</span></a>
+    <a href="#" class="sosmed-tt" target="_blank" rel="noopener" title="TikTok">🎵<span class="sosmed-label">TikTok</span></a>
+    <a href="#" class="sosmed-ig" target="_blank" rel="noopener" title="Instagram">📸<span class="sosmed-label">Instagram</span></a>
+    <a href="#" class="sosmed-web" target="_blank" rel="noopener" title="Website">🌐<span class="sosmed-label">Website</span></a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

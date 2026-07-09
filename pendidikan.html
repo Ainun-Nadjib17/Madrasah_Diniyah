@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistem Pendidikan & Tenaga Pengajar TPQ & Madrasah Diniyah">
+  <title>Pendidikan - TPQ & MADIN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600;8..60,700;8..60,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero { background: linear-gradient(135deg, var(--bg-warm), var(--bg-cream)); padding: 140px 0 80px; text-align: center; color: var(--text-dark); }
+    .page-hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 12px; }
+    .page-hero p { color: var(--text-muted); font-size: 1.1rem; }
+    .page-hero span { color: var(--gold); }
+
+    .curriculum-card { background: var(--white); border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow); border-left: 5px solid var(--primary); margin-bottom: 30px; transition: var(--transition); }
+    .curriculum-card:hover { box-shadow: var(--shadow-hover); transform: translateX(5px); }
+    .curriculum-card h3 { color: var(--primary-dark); font-size: 1.3rem; margin-bottom: 12px; }
+    .curriculum-card p { color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
+    .curriculum-card .tag { display: inline-block; background: rgba(45, 106, 79, 0.08); color: var(--primary); padding: 4px 14px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; margin-right: 6px; margin-bottom: 6px; }
+
+    .teacher-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+    .teacher-card { background: var(--white); border-radius: var(--radius); padding: 32px; text-align: center; box-shadow: var(--shadow); transition: var(--transition); border: 1px solid rgba(0,0,0,0.04); }
+    .teacher-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+    .teacher-avatar { width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 16px; background: linear-gradient(135deg, var(--primary), var(--accent)); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--white); }
+    .teacher-card h4 { font-size: 1.1rem; font-weight: 600; color: var(--primary-dark); }
+    .teacher-card .teacher-role { color: var(--primary); font-weight: 500; font-size: 0.9rem; margin: 4px 0 8px; }
+    .teacher-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+
+    .curriculum-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 2rem; }
+      .curriculum-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+          <img src="images/Logo_Madrasah3.webp" alt="Madrasah Diniyah Logo" style="width:45px; height:45px; border-radius:50%; object-fit:cover;">
+          <div class="brand-text">
+            Madrasah Diniyah
+            <span>Lembaga Pendidikan Islam</span>
+          </div>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="pendaftaran.html">Pendaftaran</a></li>
+          <li><a href="pendidikan.html" class="active">Pendidikan</a></li>
+          <li><a href="kegiatan.html">Kegiatan</a></li>
+          <li><a href="program-unggulan.html">Program Unggulan</a></li>
+          <li><a href="dokumentasi.html">Dokumentasi</a></li>
+          <li><a href="data.html">Data</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Sistem <span>Pendidikan</span></h1>
+      <p>Kurikulum terpadu dan tenaga pengajar profesional TPQ & Madrasah Diniyah</p>
+    </div>
+  </section>
+
+  <!-- Sistem Pendidikan MADIN -->
+  <section class="section-padding" style="background: var(--white);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Kurikulum</span>
+        <h2 class="section-title">Sistem Pendidikan <span>MADIN</span></h2>
+        <p class="section-subtitle">Kurikulum terpadu yang mengintegrasikan ilmu agama dan pengetahuan umum</p>
+      </div>
+      <div class="curriculum-grid">
+        <div class="fade-up">
+          <div class="curriculum-card">
+            <h3>📖 Al-Qur'an & Tajwid</h3>
+            <p>Pembelajaran Al-Qur'an dengan metode tartil yang benar sesuai kaidah tajwid. Santri diajarkan membaca, menghafal, dan memahami makna Al-Qur'an.</p>
+            <span class="tag">Tartil</span>
+            <span class="tag">Tahfidz</span>
+            <span class="tag">Tajwid</span>
+          </div>
+          <div class="curriculum-card">
+            <h3>🕌 Fiqih & Ibadah</h3>
+            <p>Pembelajaran praktik ibadah sehari-hari mulai dari thaharah, sholat, puasa, hingga muamalah dasar sesuai mazhab Syafi'i.</p>
+            <span class="tag">Fiqih</span>
+            <span class="tag">Praktik Ibadah</span>
+          </div>
+          <div class="curriculum-card">
+            <h3>📚 Bahasa Arab</h3>
+            <p>Pengenalan bahasa Arab dasar untuk memahami teks-teks keagamaan dan memperdalam ilmu Al-Qur'an.</p>
+            <span class="tag">Nahwu</span>
+            <span class="tag">Shorof</span>
+            <span class="tag">Mufrodat</span>
+          </div>
+        </div>
+        <div class="fade-up">
+          <div class="curriculum-card">
+            <h3>🌟 Akhlak & Tauhid</h3>
+            <p>Penanaman nilai-nilai akhlakul karimah dan pemahaman aqidah Ahlussunnah Wal Jama'ah sebagai fondasi keimanan.</p>
+            <span class="tag">Akhlak</span>
+            <span class="tag">Tauhid</span>
+            <span class="tag">Aswaja</span>
+          </div>
+          <div class="curriculum-card">
+            <h3>📝 Pengetahuan Umum</h3>
+            <p>Integrasi pengetahuan umum seperti matematika, bahasa Indonesia, IPA, dan IPS dalam bingkai nilai-nilai Islami.</p>
+            <span class="tag">Matematika</span>
+            <span class="tag">IPA</span>
+            <span class="tag">Bahasa</span>
+          </div>
+          <div class="curriculum-card">
+            <h3>🎯 Ekstrakurikuler</h3>
+            <p>Program pengembangan bakat dan minat santri melalui berbagai kegiatan ekstrakurikuler yang mendidik dan menyenangkan.</p>
+            <span class="tag">Silat</span>
+            <span class="tag">Al-Banjari</span>
+            <span class="tag">Tartil</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tenaga Pengajar TPQ -->
+  <section class="section-padding" style="background: var(--bg-light);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag">Pengajar</span>
+        <h2 class="section-title">Tenaga <span>Pengajar</span></h2>
+        <p class="section-subtitle">Ustadz dan Ustadzah profesional yang berdedikasi dalam mendidik santri</p>
+      </div>
+      <div class="teacher-grid">
+        <div class="teacher-card fade-up">
+          <div class="teacher-avatar">👨‍🏫</div>
+          <h4>Ustadz. Ahmad Fauzi</h4>
+          <div class="teacher-role">Kepala TPQ - Pengajar Tartil</div>
+          <p>Pengalaman mengajar 10 tahun. Alumnus Pondok Pesantren modern dan LQH (Lembaga Qur'an Hadits).</p>
+        </div>
+        <div class="teacher-card fade-up">
+          <div class="teacher-avatar">👩‍🏫</div>
+          <h4>Ustadzah. Siti Aminah</h4>
+          <div class="teacher-role">Sekretaris - Pengajar Fiqih</div>
+          <p>Pengalaman 8 tahun mengajar fiqih dan akhlak. Lulusan IAIN jurusan Pendidikan Agama Islam.</p>
+        </div>
+        <div class="teacher-card fade-up">
+          <div class="teacher-avatar">👨‍🏫</div>
+          <h4>Ustadz. Muhammad Iqbal</h4>
+          <div class="teacher-role">Kepala MADIN - Pengajar Bahasa Arab</div>
+          <p>Alumnus Timur Tengah dengan pengalaman mengajar 12 tahun. Ahli dalam nahwu dan shorof.</p>
+        </div>
+        <div class="teacher-card fade-up">
+          <div class="teacher-avatar">👩‍🏫</div>
+          <h4>Ustadzah. Khadijah</h4>
+          <div class="teacher-role">Pengajar Al-Qur'an & Tajwid</div>
+          <p>Bersanad Al-Qur'an, hafidzah 15 juz. Berpengalaman 6 tahun mengajar tahsin dan tahfidz.</p>
+        </div>
+        <div class="teacher-card fade-up">
+          <div class="teacher-avatar">👨‍🏫</div>
+          <h4>Ustadz. Abdul Malik</h4>
+          <div class="teacher-role">Pengajar Pencak Silat</div>
+          <p>Pelatih silat nasional bersertifikat. Berpengalaman 15 tahun di bidang seni bela diri tradisional.</p>
+        </div>
+        <div class="teacher-card fade-up">
+          <div class="teacher-avatar">👩‍🏫</div>
+          <h4>Ustadzah. Fatimah</h4>
+          <div class="teacher-role">Bendahara - Pengajar Al-Banjari</div>
+          <p>Ahli seni rebana dan sholawat modern. Pembimbing grup Al-Banjari yang sering meraih juara lomba.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section section-padding">
+    <div class="container">
+      <div class="cta-content fade-up">
+        <h2>Mulai Perjalanan Pendidikan Islam</h2>
+        <p>Daftarkan putra-putri Anda sekarang untuk memulai pendidikan Al-Qur'an yang berkualitas</p>
+        <div class="cta-buttons">
+          <a href="pendaftaran.html" class="btn btn-gold">📝 Daftar Sekarang</a>
+          <a href="kontak.html" class="btn btn-outline-light">Info Lebih Lanjut</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand fade-up">
+          <h3>TPQ &amp; MADIN</h3>
+          <p>Lembaga pendidikan Islam yang berkomitmen mencetak generasi Qur'ani yang berakhlak mulia, berilmu, dan berwawasan luas sejak tahun 2013.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="YouTube">📺</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="Website">🌐</a>
+          </div>
+        </div>
+        <div class="fade-up">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            <li><a href="pendidikan.html">Pendidikan</a></li>
+            <li><a href="kegiatan.html">Kegiatan</a></li>
+          </ul>
+        </div>
+        <div class="fade-up">
+          <h4>Lainnya</h4>
+          <ul class="footer-links">
+            <li><a href="program-unggulan.html">Program Unggulan</a></li>
+            <li><a href="dokumentasi.html">Dokumentasi</a></li>
+            <li><a href="data.html">Data & EMIS</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="fade-up">
+          <h4>Kontak</h4>
+          <ul class="footer-contact">
+            <li><span class="contact-icon">📍</span><span>Jl. Pendidikan No. 123, Kelurahan Islami, Kecamatan Qur'ani, Kota 12345</span></li>
+            <li><span class="contact-icon">📱</span><span>+62 812-3456-7890</span></li>
+            <li><span class="contact-icon">📧</span><span>info@tpqmadin.sch.id</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TPQ & Madrasah Diniyah. All rights reserved.</p>
+        <p>Berdedikasi untuk Ummat</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-sosmed">
+    <a href="https://wa.me/6281234567890" class="sosmed-wa" target="_blank" rel="noopener" title="WhatsApp">💬<span class="sosmed-label">WhatsApp</span></a>
+    <a href="#" class="sosmed-fb" target="_blank" rel="noopener" title="Facebook">📘<span class="sosmed-label">Facebook</span></a>
+    <a href="#" class="sosmed-yt" target="_blank" rel="noopener" title="YouTube">📺<span class="sosmed-label">YouTube</span></a>
+    <a href="#" class="sosmed-tt" target="_blank" rel="noopener" title="TikTok">🎵<span class="sosmed-label">TikTok</span></a>
+    <a href="#" class="sosmed-ig" target="_blank" rel="noopener" title="Instagram">📸<span class="sosmed-label">Instagram</span></a>
+    <a href="#" class="sosmed-web" target="_blank" rel="noopener" title="Website">🌐<span class="sosmed-label">Website</span></a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
